@@ -2,8 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=320, user-scalable=yes" id="wixMobileViewport">
+    <meta name="viewport" content="width=320, user-scalable=yes">
     <title>MK Allen Fitness</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
@@ -23,6 +30,10 @@
             display: grid;
             font-family: 'Playfair Display', serif;
         }
+        h1.title {
+            font-size: 1em;
+            font-weight: normal;
+        }
         .company-name {
             font-size: 1.4em;
             letter-spacing: 0.2em;
@@ -34,10 +45,17 @@
             font-size: 1.1em;
             margin: 0.1em;
         }
-        .logo img {
-            width: 220px;
-            object-fit: cover;
-            object-position: 50% 50%;
+        .social-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.3em;
+        }
+        .social-links li {
+            display: inline-block;
+        }
+        .social-links img {
+            width: 20px;
+            height: 20px;
         }
         .top-blurb {
             font-size: 0.8em;
@@ -53,8 +71,10 @@
             object-fit: cover;
             object-position: 50% 50%;
         }
-        .intro .title {
-            font-family: 'Playfair Display', serif;
+        .logo img {
+            width: 220px;
+            object-fit: cover;
+            object-position: 50% 50%;
         }
         .about p {
             text-align: justify;
@@ -78,43 +98,28 @@
         .links .link span.blue {
             background-color: rgba(105,253,221,1);
         }
-        .email {
-
-        }
-        .social-links ul {
-            list-style: none;
-            padding: 0;
-            margin: 0.3em;
-        }
-        .social-links li {
-            display: inline-block;
-        }
-        .social-links img {
-            width: 20px;
-            height: 20px;
-        }
     </style>
 </head>
 <body>
     <header>
-        <div class="title">
+        <h1 class="title">
             <p class="company-name">
                 MK Allen Fitness
             </p>
             <p class="name">
                 Mary Kathryn Allen
             </p>
-        </div>
+        </h1>
         <div class="social-links">
             <ul>
                 <li>
                     <a href="https://www.instagram.com/mkallenfitness/">
-                        <img src="static/instagram.png">
+                        <img src="static/instagram.png" alt="Instagram: MK Allen Fitness">
                     </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/marykathryn.atkinson/">
-                        <img src="static/facebook.png">
+                        <img src="static/facebook.png" alt="Facebook: Mary Kathryn Allen">
                     </a>
                 </li>
             </ul>
