@@ -19,19 +19,33 @@
             text-decoration: none;
             color: rgba(24,24,24,1);
         }
-        .top {
+        header {
             display: grid;
             font-family: 'Playfair Display', serif;
         }
-        .top .name {
-            font-size: 1.1em;
-            letter-spacing: 0.4em;
+        .company-name {
+            font-size: 1.4em;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
-            margin: 0.5em;
+            margin-top: 0.5em;
+            margin-bottom: 0.2em;
+        }
+        .name {
+            font-size: 1.1em;
+            margin: 0.1em;
+        }
+        .logo img {
+            width: 220px;
+            object-fit: cover;
+            object-position: 50% 50%;
         }
         .top-blurb {
             font-size: 0.8em;
             margin: 0.5em;
+        }
+        .top-blurb p {
+            margin-top: 0;
+            margin-bottom: 1em;
         }
         .hero img {
             width: 320px;
@@ -42,18 +56,10 @@
         .intro .title {
             font-family: 'Playfair Display', serif;
         }
-        .title .name {
-            font-size: 1.5em;
-            margin-bottom: 0.3em;
-        }
-        .title .company-name {
-            margin-top: 0;
-        }
         .about p {
             text-align: justify;
             margin: 1.1em;
             font-size: 0.75em;
-            color: rgb(149, 97, 92);
         }
         .links .link {
             margin-bottom: 1.5em;
@@ -63,12 +69,22 @@
             font-size: 0.75em;
             padding: 0.5em;
         }
+        .links .link span.pink {
+            background-color: rgba(252,109,185,1);
+        }
+        .links .link span.yellow {
+            background-color: rgba(249,249,140,1);
+        }
+        .links .link span.blue {
+            background-color: rgba(105,253,221,1);
+        }
         .email {
 
         }
         .social-links ul {
             list-style: none;
             padding: 0;
+            margin: 0.3em;
         }
         .social-links li {
             display: inline-block;
@@ -81,76 +97,81 @@
 </head>
 <body>
     <header>
-        <div class="top">
-            <p class="name">Mary Kathryn</p>
-            <div class="top-blurb">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Pellentesque luctus sem sit amet sapien vestibulum, non rutrum justo lacinia. Proin viverra, elit quis pulvinar finibus, elit justo commodo lectus</p>
-                <p>Nam in enim ultrices, ultrices lorem quis, tincidunt dolor. Etiam dui eros, pellentesque eget ornare sit amet, lacinia id lacus.</p>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="hero">
-            <img src="/static/header.jpg" alt="Photo of Mary Kathryn">
-        </div>
-        <div class="intro">
-            <div class="title">
-                <p class="name">
-                    Mary Kathryn Allen
-                </p>
-                <p class="company-name">
-                    MK Allen Fitness
-                </p>
-            </div>
-            <div class="about">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus sem sit amet sapien vestibulum, non rutrum justo lacinia. Proin viverra, elit quis pulvinar finibus, elit justo commodo lectus, at dictum orci nunc nec mi. Donec sagittis viverra bibendum. Pellentesque erat arcu, feugiat ac sagittis et, iaculis ac nulla. Quisque ante elit, auctor at velit vel, accumsan volutpat est. Curabitur vitae risus vitae turpis tempor rhoncus. Vivamus vel lobortis enim, posuere blandit justo. Maecenas urna dui, elementum id dui nec, pharetra gravida tellus. Pellentesque vitae felis nibh. Curabitur hendrerit quam vel mauris suscipit, nec porttitor lectus congue. Nunc feugiat lacinia tortor.
-                </p>
-                <p>
-                    Nam in enim ultrices, ultrices lorem quis, tincidunt dolor. Etiam dui eros, pellentesque eget ornare sit amet, lacinia id lacus. Proin convallis lectus sed mi imperdiet, volutpat interdum felis euismod. Curabitur non feugiat dui. Sed eu facilisis magna. Pellentesque viverra, tortor id tempor condimentum, nulla orci imperdiet lacus, at condimentum sapien sapien id nulla. Nam luctus arcu nec dolor aliquet auctor. Integer sed sem gravida, vehicula dolor sit amet, efficitur libero. Sed sollicitudin iaculis purus a varius. Cras sed accumsan leo. Pellentesque porttitor risus vitae pulvinar pulvinar. Sed sollicitudin sed orci sit amet auctor.
-                </p>
-                <p>
-                    Vivamus rhoncus pulvinar aliquam. Quisque vitae nulla nec purus dapibus lacinia. Ut sagittis finibus purus eget blandit. Morbi pellentesque tristique accumsan. Nunc ornare dui nec enim maximus, in commodo eros bibendum. Sed varius, justo id vestibulum molestie, justo elit ultrices neque, sed suscipit dui arcu ac velit. Proin quam massa, vulputate quis rutrum non, maximus in risus. Nam varius sem sapien, quis rutrum velit pretium vitae. Donec et est magna. Nunc vehicula lorem ut porttitor convallis. Nulla quis ante tincidunt, imperdiet dui elementum, suscipit dui. Donec ac tellus tincidunt magna ultrices accumsan vitae at tellus. Sed sit amet sem sollicitudin, scelerisque mauris in, sagittis odio.
-                </p>
-            </div>
-        </div>
-        <div class="links">
-            <p class="link">
-                <span><a href="#">Join my Accountability "Wellness Community"</a></span>
+        <div class="title">
+            <p class="company-name">
+                MK Allen Fitness
             </p>
-            <p class="link">
-                <span><a href="#">Become an Influencer on my Team</a></span>
-            </p>
-            <p class="link">
-                <span><a href="#">Get my Photo Presets</a></span>
-            </p>
-            <p class="link">
-                <span><a href="#">Free Workout Resources</a></span>
+            <p class="name">
+                Mary Kathryn Allen
             </p>
         </div>
-    </main>
-    <footer>
-        <div class="hero">
-            <img src="/static/footer.jpg" alt="Photo of Mary Kathryn">
-        </div>
-        <p class="email">
-            <a href="mailto:mkallenfitness@gmail.com">mkallenfitness@gmail.com</a>
-        </p>
         <div class="social-links">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="https://www.instagram.com/mkallenfitness/">
                         <img src="static/instagram.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/marykathryn.atkinson/">
                         <img src="static/facebook.png">
                     </a>
                 </li>
             </ul>
         </div>
+        <div class="top-blurb">
+            <p>Keeping mom life real and unfiltered. Living for Jesus. Former athlete.</p>
+            <p>Helping moms of littles get fit and find purpose in the messy motherhood moments.</p>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="static/header.jpg" alt="MK flexing her bicep and smiling">
+        </div>
+        <div class="logo">
+            <img src="static/mkaf_logo.jpg" alt="Logo for MK Allen Fitness">
+        </div>
+        <div class="intro">
+            <div class="about">
+                <p>
+                    Hey hey! I’m so glad you are here! Welcome to the real, the raw, the messy. I’m MK, mom to two little girls, living the sunny Florida life. I’m the girl who says what everyone else is thinking… because I don’t want anyone to feel <strong>ALONE</strong>! Jesus is the center of my life and I’m living to make Him known. I fully believe He has given me this platform for a reason.
+                </p>
+                <p>
+                    I was an Occupational Therapist before having my daughters and I always knew I wanted to be a stay-at-home mom. I never realized that I would still need something for ME, so that I wouldn’t lose myself in motherhood.
+                </p>
+                <p>
+                    I love food, fitness, faith, football, and FUN! All the appropriate F words. I love walking with women through their health and fitness journey to help them find something sustainable and realistic that they can stick with for the long haul.
+                </p>
+                <p>
+                    My hope is that you find inspiration and laughs from my page. That you feel less alone. That you look at my page and think “huh, she’s normal, a hot mess, and she’s doing it… maybe I can too”.
+                </p>
+                <p>
+                    So welcome. My house is usually a mess, my kids are crazy, and it’s a blessed mess daily. I rarely wear makeup, prefer to live in athleisure, might end up on <em>What Not to Wear</em>, and will never give up margaritas or chocolate. But I promise to always be real and tell it as it is. I’m so glad you are here, and I hope you stick around. 
+                </p>
+            </div>
+        </div>
+        <div class="links">
+            <p class="link">
+                <span class="pink"><a href="https://tinyurl.com/fitwithMK">Join my Accountability Group</a></span>
+            </p>
+            <p class="link">
+                <span class="yellow"><a href="https://tinyurl.com/9weekswithMK">Get info on my test group</a></span>
+            </p>
+            <p class="link">
+                <span class="blue"><a href="https://docs.google.com/forms/d/e/1FAIpQLSckYKSdHY1f54KzqFgNTX6ILf_-VwUWeBfPPbPSOUO6eUMjFQ/viewform?usp=sf_link">Be an influencer on my team</a></span>
+            </p>
+            <p class="link">
+                <span class="pink"><a href="https://www.square36.com">My fav workout mat - discount code MK10</a></span>
+            </p>
+        </div>
+    </main>
+    <footer>
+        <div class="hero">
+            <img src="static/footer.jpg" alt="MK sitting on the porch wrapped in a throw blanket">
+        </div>
+        <p class="email">
+            <a href="mailto:mkallenfitness@gmail.com">mkallenfitness@gmail.com</a>
+        </p>
     </footer>
 </body>
 </html>
