@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const calendarContainer = document.getElementById("calendar-container");
+    const fullScreenGallery = document.getElementById("full-screen-gallery");
+    const closeGalleryBtn = document.getElementById("close-gallery");
+    const galleryImages = document.querySelectorAll(".gallery img, .more-photos");
+    const fullScreenImagesContainer = document.querySelector(".full-screen-images");
 
     const generateCalendar = () => {
         let calendarHTML = "<table><thead><tr>";
@@ -26,6 +30,20 @@ document.addEventListener("DOMContentLoaded", function() {
         calendarHTML += "</tr></tbody></table>";
         calendarContainer.innerHTML = calendarHTML;
     };
+
+    const openFullScreenGallery = () => {
+        fullScreenGallery.classList.remove("hidden");
+    };
+
+    const closeFullScreenGallery = () => {
+        fullScreenGallery.classList.add("hidden");
+    };
+
+    galleryImages.forEach(image => {
+        image.addEventListener("click", openFullScreenGallery);
+    });
+
+    closeGalleryBtn.addEventListener("click", closeFullScreenGallery);
 
     generateCalendar();
 });
