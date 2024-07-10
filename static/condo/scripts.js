@@ -1,43 +1,107 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const unavailableDateRanges = [
+        { start: "2024-07-12", end: "2024-07-15" },
+        { start: "2024-07-25", end: "2024-08-07" },
+    ];
+
     const calendarContainer = document.getElementById("calendar-container");
     const fullScreenGallery = document.getElementById("full-screen-gallery");
     const closeGalleryBtn = document.getElementById("close-gallery");
     const galleryImages = document.querySelectorAll(".gallery img, .more-photos");
     const fullScreenImagesContainer = document.querySelector(".full-screen-images");
 
-    const generateCalendar = () => {
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // Function to create the availability calendar
+    function createCalendar() {
+        const calendarContainer = document.getElementById("calendar-container");
         const today = new Date();
-        const availability = [true, false, true, true, false, true, false, true, true, true, false, false, true, true, false, false, true, true, true, true, false, false, true, true, true, false, true, false, true, true, true]; // dummy data
+        const currentMonth = today.getMonth();
+        const currentYear = today.getFullYear();
 
-        for (let m = 0; m < 6; m++) {
-            const month = new Date(today.getFullYear(), today.getMonth() + m, 1);
-            const monthLabel = `${months[month.getMonth()]} ${month.getFullYear()}`;
-            let daysInMonth = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
-            let calendarHTML = `<div class="month"><div class="month-label">${monthLabel}</div><div class="table-container"><table><thead><tr>`;
+        // Clear existing calendar content
+        calendarContainer.innerHTML = "";
+
+        // Loop through next 6 months
+        for (let i = 0; i < 6; i++) {
+            const month = (currentMonth + i) % 12;
+            const year = currentYear + Math.floor((currentMonth + i) / 12);
+
+            // Create month container
+            const monthDiv = document.createElement("div");
+            monthDiv.classList.add("month");
+
+            // Create month label
+            const monthLabel = document.createElement("div");
+            monthLabel.classList.add("month-label");
+            monthLabel.textContent = `${getMonthName(month)} ${year}`;
+            monthDiv.appendChild(monthLabel);
+
+            // Create table for dates
+            const table = document.createElement("table");
+            const daysInMonth = new Date(year, month + 1, 0).getDate(); // Get number of days in month
+
+            // Create table header (days of the week)
+            const thead = document.createElement("thead");
+            const tr = document.createElement("tr");
             const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            daysOfWeek.forEach(day => calendarHTML += `<th>${day}</th>`);
-            calendarHTML += "</tr></thead><tbody><tr>";
+            daysOfWeek.forEach(day => {
+                const th = document.createElement("th");
+                th.textContent = day;
+                tr.appendChild(th);
+            });
+            thead.appendChild(tr);
+            table.appendChild(thead);
 
-            for (let i = 1; i <= daysInMonth; i++) {
-                let day = new Date(month.getFullYear(), month.getMonth(), i).getDay();
-                if (i === 1 && day !== 0) {
-                    for (let j = 0; j < day; j++) {
-                        calendarHTML += "<td></td>";
+            // Create table body (dates)
+            const tbody = document.createElement("tbody");
+            let dayOfMonth = 1;
+            for (let row = 0; row < 6; row++) {
+                const tr = document.createElement("tr");
+                for (let col = 0; col < 7; col++) {
+                    const td = document.createElement("td");
+                    if (row === 0 && col < new Date(year, month, 1).getDay()) {
+                        td.textContent = "";
+                    } else if (dayOfMonth > daysInMonth) {
+                        td.textContent = "";
+                    } else {
+                        td.textContent = dayOfMonth;
+                        const currentDate = new Date(year, month, dayOfMonth);
+
+                        // Check if current date is within any of the unavailable date ranges
+                        if (isDateUnavailable(currentDate)) {
+                            td.classList.add("unavailable");
+                        } else {
+                            td.classList.add("available");
+                        }
+                        dayOfMonth++;
                     }
+                    tr.appendChild(td);
                 }
-
-                const availabilityIndex = ((month.getMonth() * 31) + i) % availability.length; // Example of rotating dummy data
-                calendarHTML += `<td class="${availability[availabilityIndex] ? 'available' : 'unavailable'}">${i}</td>`;
-                if (day === 6 && i !== daysInMonth) {
-                    calendarHTML += "</tr><tr>";
-                }
+                tbody.appendChild(tr);
             }
-
-            calendarHTML += "</tr></tbody></table></div></div>";
-            calendarContainer.innerHTML += calendarHTML;
+            table.appendChild(tbody);
+            monthDiv.appendChild(table);
+            calendarContainer.appendChild(monthDiv);
         }
-    };
+    }
+
+    // Helper function to check if a date is within any unavailable date range
+    function isDateUnavailable(date) {
+        for (let range of unavailableDateRanges) {
+            const startDate = new Date(range.start);
+            const endDate = new Date(range.end);
+            if (date >= startDate && date <= endDate) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Helper function to get month name
+    function getMonthName(month) {
+        const months = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+        return months[month];
+    }
 
     const openFullScreenGallery = () => {
         fullScreenGallery.classList.remove("hidden");
@@ -53,5 +117,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
     closeGalleryBtn.addEventListener("click", closeFullScreenGallery);
 
-    generateCalendar();
+    createCalendar();
 });

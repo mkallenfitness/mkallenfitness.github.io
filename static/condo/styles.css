@@ -74,6 +74,27 @@ section {
     border-radius: 4px;
 }
 
+#legend {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.legend-item {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.available {
+    background-color: #CDE7F1; /* Light blue, like clear tropical waters */
+}
+
+.unavailable {
+    background-color: #FFD3B6; /* Light orange, warm like the beach sand */
+}
+
 #calendar {
     text-align: center;
 }
