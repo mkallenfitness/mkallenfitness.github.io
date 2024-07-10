@@ -3,67 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beach Condo Listing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Beachfront Condo | New Smyrna Beach</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
-    <h1>Beach Condo</h1>
+    <h1>Beachfront Condo</h1>
+    <h2>New Smyrna Beach</h2>
 </header>
+<main>
+    <section id="gallery">
+        <h2>Photos</h2>
+        <div class="gallery">
+            <img src="photos/img1.webp" alt="Living Room">
+            <img src="photos/img2.webp" alt="Balcony View">
+            <img src="photos/img3.webp" alt="Pool Area">
+            <img src="photos/img4.webp" alt="Pool Area">
+        </div>
+        <div class="more-photos" onclick="openFullScreenGallery()">+ More Photos</div>
+    </section>
 
-<section id="description">
-    <h2>Description</h2>
-    <p>Welcome to our beautiful beach condo! Enjoy stunning ocean views, modern amenities, and the perfect getaway location. Our condo features 2 bedrooms, a fully equipped kitchen, free Wi-Fi, and more.</p>
-    <ul>
-        <li>Ocean view</li>
-        <li>2 bedrooms</li>
-        <li>Fully equipped kitchen</li>
-        <li>Free Wi-Fi</li>
-        <li>Swimming pool access</li>
-        <li>Close to local attractions</li>
-    </ul>
-</section>
+    <section id="description">
+        <h2>Description</h2>
+        <p>Welcome to your beachfront retreat in New Smyrna Beach! This spacious condo offers stunning views of the Atlantic Ocean and is located directly on the no-drive section of the beach, ensuring a peaceful and safe environment.</p>
 
-<section id="gallery">
-    <h2>Photo Gallery</h2>
-    <div class="gallery">
-        <img src="photos/img1.webp" alt="Condo image 1">
-        <img src="photos/img2.webp" alt="Condo image 2">
-        <img src="photos/img3.webp" alt="Condo image 3">
-        <img src="photos/img4.webp" alt="Condo image 4">
-        <div class="more-photos">+ More Photos</div>
-    </div>
-</section>
+        <h3>Location and Local Attractions</h3>
+        <ul>
+            <li><strong>Local Dining:</strong> Explore a variety of dining options, from beachfront cafes to seafood restaurants offering fresh catch of the day.</li>
+            <li><strong>Art and Culture:</strong> Visit local art galleries and boutiques, or attend cultural events and festivals that celebrate the community's rich heritage.</li>
+            <li><strong>Outdoor Activities:</strong> Experience the thrill of surfing, paddleboarding, or simply lounging under the sun on our no-drive beach. Nearby parks and nature reserves offer hiking trails and wildlife viewing opportunities.</li>
+        </ul>
 
-<section id="calendar">
-    <h2>Availability Calendar</h2>
-    <div id="calendar-container"></div>
-</section>
+        <h3>Condo Features and Amenities</h3>
+        <ul>
+            <li><strong>Swimming Pool:</strong> Cool off in the sparkling pool or lounge on the sun deck overlooking the ocean.</li>
+            <li><strong>Balcony:</strong> Relax with panoramic views from the private balcony, perfect for morning coffee or sunset cocktails.</li>
+            <li><strong>Full Kitchen:</strong> Prepare meals with ease in the fully equipped kitchen, complete with modern appliances and ample counter space.</li>
+            <li><strong>Entertainment:</strong> Stay connected with complimentary WiFi and enjoy entertainment on two TVs available in the condo.</li>
+            <li><strong>Bedrooms:</strong> Retreat to the spacious primary bedroom featuring a king-sized bed and en suite bathroom with a walk-in shower. The second bedroom is ideal for families with a bunk bed (twin over full) and an additional twin trundle mattress.</li>
+            <li><strong>Beach Gear:</strong> Beach chairs, sand toys, boogie boards, and a beach tent are provided for your convenience.</li>
+            <li><strong>Recreational Facilities:</strong> Enjoy onsite amenities including shuffleboard courts, tennis courts, and basketball courts.</li>
+            <li><strong>Family-Friendly:</strong> A playroom is stocked with toys and board games, ensuring fun activities for children and families.</li>
+        </ul>
+    </section>
+
+    <section id="calendar">
+        <h2>Availability Calendar</h2>
+        <div id="calendar-container">
+            <!-- Calendar will be generated dynamically by scripts.js -->
+        </div>
+    </section>
+</main>
 
 <footer>
-    <p>&copy; 2024 Beach Condo</p>
+    <p>&copy; 2024 Beachfront Condo. All rights reserved.</p>
 </footer>
 
 <div id="full-screen-gallery" class="hidden">
-    <button id="close-gallery">X</button>
+    <button id="close-gallery" onclick="closeFullScreenGallery()">X</button>
     <div class="full-screen-images">
-        <img src="photos/img1.webp" alt="Condo image 1">
-        <img src="photos/img2.webp" alt="Condo image 2">
-        <img src="photos/img3.webp" alt="Condo image 3">
-        <img src="photos/img4.webp" alt="Condo image 4">
-        <img src="photos/img5.webp" alt="Condo image 5">
-        <img src="photos/img6.webp" alt="Condo image 6">
-        <img src="photos/img7.webp" alt="Condo image 7">
-        <img src="photos/img8.webp" alt="Condo image 8">
-        <img src="photos/img9.webp" alt="Condo image 9">
-        <img src="photos/img10.webp" alt="Condo image 10">
-        <img src="photos/img11.webp" alt="Condo image 11">
-        <img src="photos/img12.webp" alt="Condo image 12">
-        <img src="photos/img13.webp" alt="Condo image 13">
-        <img src="photos/img14.webp" alt="Condo image 14">
-        <img src="photos/img15.webp" alt="Condo image 15">
-        <!-- Add more images as needed -->
+        <img src="photos/img1.webp" alt="Living Room">
+        <img src="photos/img2.webp" alt="Balcony View">
+        <img src="photos/img3.webp" alt="Pool Area">
+        <!-- Additional full-screen images will be dynamically added here -->
     </div>
 </div>
 
