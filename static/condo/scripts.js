@@ -55,6 +55,9 @@ document.addEventListener("DOMContentLoaded", function() {
             const tbody = document.createElement("tbody");
             let dayOfMonth = 1;
             for (let row = 0; row < 6; row++) {
+                if (dayOfMonth > daysInMonth) {
+                    break;
+                }
                 const tr = document.createElement("tr");
                 for (let col = 0; col < 7; col++) {
                     const td = document.createElement("td");
