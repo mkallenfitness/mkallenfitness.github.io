@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     color: #484848;
-    background-color: #f7f7f7;
+    background-color: #f2f2f2; /* Light gray background */
 }
 
 header {
-    background-color: #FF5A5F;
+    background-color: #4A90E2; /* Blue like the ocean */
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -54,7 +54,7 @@ section {
     padding: 0.75rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #FF5A5F;
+    background-color: #FF5A5F; /* Coral pink, reminiscent of tropical flowers */
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -69,7 +69,7 @@ section {
 }
 
 #description ul li {
-    background: #e9e9e9;
+    background: #f2f2f2; /* Light gray background */
     margin: 0.5rem 0;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -94,7 +94,7 @@ section {
 }
 
 .month-label {
-    background-color: #FF5A5F;
+    background-color: #4A90E2; /* Blue like the ocean */
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 4px;
@@ -122,20 +122,20 @@ th, td {
 }
 
 th {
-    background-color: #FF5A5F;
+    background-color: #4A90E2; /* Blue like the ocean */
     color: white;
 }
 
 .available {
-    background-color: #c8e6c9;
+    background-color: #CDE7F1; /* Light blue, like clear tropical waters */
 }
 
 .unavailable {
-    background-color: #ffcdd2;
+    background-color: #FFD3B6; /* Light orange, warm like the beach sand */
 }
 
 footer {
-    background-color: #484848;
+    background-color: #4A90E2; /* Blue like the ocean */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -163,7 +163,7 @@ footer {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    background: #FF5A5F;
+    background: #FF5A5F; /* Coral pink, reminiscent of tropical flowers */
     color: white;
     border: none;
     padding: 0.5rem 1rem;
