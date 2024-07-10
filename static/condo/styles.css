@@ -1,61 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #484848;
+    background-color: #f7f7f7;
 }
 
 header {
-    background-color: #f8b400;
+    background-color: #FF5A5F;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 h1, h2 {
     margin: 0.5rem 0;
+    font-weight: 600;
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
 #gallery {
     text-align: center;
-    margin: 2rem 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .gallery img {
-    max-width: 100%;
-    height: auto;
-    margin: 0.5rem;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-}
-
-#description {
-    padding: 1rem;
+    max-width: 30%;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #description ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 #description ul li {
-    background: #f0f0f0;
+    background: #e9e9e9;
     margin: 0.5rem 0;
-    padding: 0.5rem;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 #calendar {
-    padding: 1rem;
     text-align: center;
 }
 
+#calendar-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #FF5A5F;
+    color: white;
+}
+
+.available {
+    background-color: #c8e6c9;
+}
+
+.unavailable {
+    background-color: #ffcdd2;
+}
+
 footer {
-    background-color: #333;
+    background-color: #484848;
     color: white;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }

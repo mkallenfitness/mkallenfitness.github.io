@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function() {
         daysOfWeek.forEach(day => calendarHTML += `<th>${day}</th>`);
         calendarHTML += "</tr></thead><tbody><tr>";
 
-        // Dummy data for availability
         const availability = [true, false, true, true, false, true, false, true, true, true, false, false, true, true, false, false, true, true, true, true, false, false, true, true, true, false, true, false, true, true, true];
 
         for (let i = 1; i <= 31; i++) {
