@@ -78,7 +78,32 @@ section {
 }
 
 #calendar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow-x: auto;
+}
+
+.month {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.month-label {
+    background-color: #FF5A5F;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
 }
 
 table {
@@ -88,9 +113,10 @@ table {
 }
 
 th, td {
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     border: 1px solid #ddd;
+    min-width: 2rem;
 }
 
 th {
