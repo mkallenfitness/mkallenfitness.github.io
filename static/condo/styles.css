@@ -10,7 +10,7 @@ header {
     background-color: #4A90E2; /* Blue like the ocean */
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 0.5rem 0;
 }
 
 h1, h2 {
@@ -19,7 +19,7 @@ h1, h2 {
 }
 
 section {
-    padding: 2rem;
+    padding: 1rem;
     margin: 0 auto;
     max-width: 900px;
     background-color: white;
@@ -49,7 +49,6 @@ section {
 }
 
 .more-photos {
-    width: 100%;
     margin: 0.5rem 0;
     padding: 0.75rem;
     border-radius: 8px;
@@ -77,7 +76,6 @@ section {
 
 #calendar {
     text-align: center;
-    padding: 0 1rem;
 }
 
 #calendar-container {
