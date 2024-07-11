@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const unavailableDateRanges = [
         { start: "2024-07-12", end: "2024-07-15" },
-        { start: "2024-07-25", end: "2024-08-07" },
+        { start: "2024-07-25", end: "2024-08-09" },
     ];
 
     const calendarContainer = document.getElementById("calendar-container");
