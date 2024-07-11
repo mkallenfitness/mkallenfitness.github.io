@@ -21,7 +21,6 @@ def generate_file_hash(filepath):
         buf = f.read()
         hasher.update(buf)
     hash = hasher.hexdigest()
-    print(f"Hash for {filepath}: {hash}")
     return hash
 
 # Function to update the references in HTML
@@ -31,11 +30,9 @@ def update_html_references(html_file, files_with_hash):
         content = file.read()
 
     for original, hashed in files_with_hash.items():
-        print(f"Setting hash for {original}")
         find = rf'({original})(\?{URL_PARAM}=[a-f0-9]+)?'
         replace = f'{original}?{URL_PARAM}={hashed}'
-        print(find)
-        print(replace)
+        print(f"Setting hash for {replace}")
         content = re.sub(find, replace, content)
 
     with open(html_file, 'w') as file:
@@ -47,6 +44,7 @@ for folder in FOLDERS_TO_HASH:
     all_files += [f'{file}'.removeprefix(f'{ROOT}/') for file in Path(f'{ROOT}/{folder}').rglob('*')]
 
 # Generate hashes for the specified files
+print(f"Generating {len(all_files)} file hashes")
 files_with_hash_dict = {file: generate_file_hash(f'{ROOT}/{file}') for file in all_files}
 
 # Update the references in the HTML file
