@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const unavailableDateRanges = [
-        { start: "2024-07-12", end: "2024-07-16" },
+        { start: "2024-07-12", end: "2024-07-19" },
         { start: "2024-07-25", end: "2024-08-09" },
     ];
 
